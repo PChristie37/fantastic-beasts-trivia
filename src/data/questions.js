@@ -9,6 +9,6 @@ export const questions = [
   },
   {
     id:2,
-    question:"Who is the cooliest?"
+    question:"Which professor is Head of Ravenclaw house?"
   }
 ]

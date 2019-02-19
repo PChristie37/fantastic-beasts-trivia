@@ -54,22 +54,22 @@ export const answers =[
         answers:[
             {
                 id:0,
-                answer:"Peter",
+                answer:"Minerva McGonagall",
                 correct:false
             },
             {
                 id:1,
-                answer:"Tina",
+                answer:"Filius Flitwick",
                 correct:true
             },
             {
                 id:2,
-                answer:"Gavin",
+                answer:"Sybill Trelawney",
                 correct:false
             },
             {
                 id:3,
-                answer:"Mobeen",
+                answer:"Horace Slughorn",
                 correct:false
             }
         ]

@@ -68,7 +68,7 @@ class App extends Component {
       <div className="App">
         <UpdateDocumentTitle question={this.state.onQuestion + 1} questions={data.questions.length} />
         <h1>Welcome to the Fantastic Beasts Trivia Application!</h1>
-        <LinearDeterminate onQuestion={this.state.onQuestion +1} length={data.questions.length}/>
+        <ProgressBar complete={this.state.triviaFinished} onQuestion={this.state.onQuestion} questionLength={data.questions.length}/>
         {this.state.triviaFinished ? 
           Results 
           : 
@@ -95,12 +95,11 @@ function UpdateDocumentTitle({question, questions}){
   return null
 }
 
-function LinearDeterminate(props) {
-  console.log(props)
-  const { onQuestion, length} = props;
+function ProgressBar(props) {
+  const { complete, onQuestion, questionLength} = props;
   return (
     <div>
-      <LinearProgress variant="determinate" value={(onQuestion/length)*100} />
+      <LinearProgress variant="determinate" value={complete ? 100 : (onQuestion/questionLength)*100} />
     </div>
   );
 }
